@@ -1,5 +1,24 @@
 """ For a given integer output list of prime factors"""
 
+import time
+start_time = time.time()
+
+#simple solution
+num = int(input("Enter a positive integer"))
+divisor = 2
+factors = []
+while divisor<=num:
+    if num % divisor == 0:
+        factors.append(divisor)
+        num = num / divisor
+    else:
+        divisor +=1
+print(factors)
+
+
+
+#complex solution
+"""
 #returns a list of prime numbers in given range
 def get_primes(n):
     prime_vals= []
@@ -30,6 +49,9 @@ while num!=1:
         primes.remove(val)
 
 print(factors)
+
+"""
+print(time.time()-start_time)
 
 
 
